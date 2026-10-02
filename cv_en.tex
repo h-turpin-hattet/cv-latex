@@ -1,0 +1,205 @@
+%-------------------------
+% Resume in Latex
+% Anonymized version
+%------------------------
+\documentclass[a4paper,11pt]{article}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\footskip}{4.08003pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=1cm, right=1.4cm, bottom=1cm}
+\urlstyle{same}
+\raggedright
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+\vspace{0mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\[-0.5mm]
+        \textit{\footnotesize{#3}} &  \textit{\footnotesize{#2}}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubheadingText}[1]{
+\vspace{0mm}\item
+    \begin{minipage}[t]{0.98\linewidth}
+        \small {#1}\\
+    \end{minipage}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubheadingSkill}[2]{
+  \item \textbf{#1}{: #2}\\
+}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeSubHeadingTextStart}{\begin{itemize}[leftmargin=2.54mm,label={}]}
+\newcommand{\resumeSubHeadingSkillStart}{\begin{itemize}[leftmargin=2.54mm, label={}, noitemsep]\small}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=9ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeSubHeadingTextEnd}{\end{itemize}\vspace{0mm}}
+\newcommand{\resumeSubHeadingSkillEnd}{\end{itemize}\vspace{-16pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{XXXXXXXXX XXXXXX} % My Name
+\newcommand{\titreCV}{XXXXXX}
+\newcommand{\AddressA}{XXXXXXXXXX XXX XXX,} % My address
+\newcommand{\AddressB}{XXXXX XXXXX,} % My Address
+\newcommand{\AddressC}{XXXXXXXXX} % My Address
+\newcommand{\phone}{X XX XX XX XX} % My Phone Number
+\newcommand{\email}{XXXXXXXXXXXX@XXXXX.XXX} %My Email
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADING-----------------
+\parbox{2.5cm}{
+\includegraphics[width=2.5cm,clip]{XX/XXXXXX.png}
+}
+\parbox{\dimexpr\linewidth-2.9cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name}\\
+  \textbf{\titreCV}\\
+  \AddressA  & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +33 \phone}\\
+  \AddressB & \href{mailto:\email}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\email}} \\
+  \AddressC &  \href{}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}\\
+\end{tabularx}
+}
+
+%-----------PROFILE-------------
+\vspace{-2mm}
+\section{\textbf{Profile}}
+  \resumeSubHeadingTextStart
+    \resumeSubheadingText
+       {QA Automation Engineer with 6 years of experience combining technical test architecture (Python, ECU-TEST, Jenkins, GitHub) and team leadership. Currently specializing in advanced automation, with Python (pytest, GitHub Actions) and an upcoming DevOps training.}\\
+       {Based in Munich, actively relocating to Paris.}
+  \resumeSubHeadingTextEnd
+
+\vspace{-5.5mm}
+
+%-----------EDUCATION-----------
+\vspace{+0.5mm}
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Self-Training - Python (pytest, GitHub Actions)}{}
+      {Python fundamentals review (freeCodeCamp, Exercism) and automated testing portfolio project}{2026 - Present}
+    \resumeSubheading
+      {ESEO Graduate School of Engineering (Master's level)}{}
+      {Electronics, computer science and embedded systems}{2016 - 2019}
+    \resumeSubheading
+      {IUT Electronics and Industrial Computing (2-year technical diploma)}{}
+      {Mathematics, physics, electricity, electronics, computer science, automation}{2014 - 2016}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------EXPERIENCE-----------------
+\vspace{+0.5mm}
+\section{\textbf{Professional Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Up-Technologies}{Lyon}
+      {System Test Engineer - BioMérieux}{01.2026 - 03.2026}
+      \vspace{-1mm}
+      \resumeItemListStart
+    \item {Onboarded onto a complex web architecture for functional testing (medical diagnostics solution)}
+    \item {Executed manual and lab testing, with quality protocol documentation and SQL query analysis}
+    \item {Maintained an existing Python test automation tool, defined automation focus areas}
+    \resumeItemListEnd
+
+    \vspace{-1.5mm}
+
+    \resumeSubheading
+      {Capgemini Engineering}{Munich}
+      {Product Owner Automation - BMW Smoketest}{05.2024 - 12.2025}
+      \vspace{-1mm}
+      \resumeItemListStart
+    \item {Redesigned the test architecture into a state-machine model, with hands-on technical leadership and development}
+    \item {Designed the overall architecture of automated test campaigns}
+    \item {Refactored and optimized existing automation packages (Selenium, Android, QR code) into a reusable package library, with complementary tests via ADB/ADB Shell}
+    \item {Oversaw CI pipelines (Jenkins) within the team}
+    \item {Coordinated testing and team schedules, presented results to stakeholders}
+    \resumeItemListEnd
+
+    \vspace{-1.5mm}
+
+    \resumeSubheading
+      {Capgemini Engineering}{Munich}
+      {Automation Engineer - BMW Speech}{04.2022 - 05.2024}
+      \vspace{-1mm}
+      \resumeItemListStart
+    \item {Set up CI pipelines (Jenkins) and developed automated tests in Python (ECU-TEST)}
+    \item {Optimized the test code consuming an AWS voice synthesis service}
+    \item {Analyzed low-level communication protocols (USB, Bluetooth, embedded networks) to support functional validation}
+    \item {Responded to an unplanned client-side software change by designing a hardware solution and a network injection protocol, unblocking ongoing test campaigns}
+    \resumeItemListEnd
+
+    \vspace{-1.5mm}
+
+    \resumeSubheading
+      {Capgemini Engineering}{Munich}
+      {Function Owner - USB BMW Media Player}{10.2019 - 04.2022}
+      \vspace{-1mm}
+      \resumeItemListStart
+    \item {Managed and triaged software defects across multiple product versions and designed test campaigns per functional specifications, in direct coordination with the client and suppliers}
+    \item {Conducted weekly performance analysis and defined quality improvement areas}
+    \resumeItemListEnd
+
+    \vspace{-1.5mm}
+
+    \resumeSubheading
+      {Altran Deutschland}{Munich}
+      {Internship - BMW Media Player}{04.2019 - 09.2019}
+      \vspace{-1mm}
+      \resumeItemListStart
+    \item {Executed targeted manual tests to reproduce software anomalies}
+    \item {Designed test scenarios structured by product functionality}
+    \item {Overhauled the quality reporting framework to improve KPI tracking}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------SKILLS-----------------
+\vspace{-0.5mm}
+\section{\textbf{Technical Skills \& Interests}}
+  \resumeSubHeadingSkillStart
+    \resumeSubheadingSkill{Automation \& Testing}{ECU-TEST, Jenkins, Git/GitHub, Jira, embedded systems, VMware, SQL, Android, communication protocols (ADB, USB, Bluetooth, SOME/IP, UDS)}
+    \resumeSubheadingSkill{Programming Languages}{Python, Shell/Bash}
+    \resumeSubheadingSkill{Methodologies}{Agile within a V-model framework, test strategy, defect management}
+    \resumeSubheadingSkill{Languages}{French (Native), English (Fluent), German (Intermediate)}
+    \resumeSubheadingSkill{Interests}{Cycling, running, swimming, cinema, literature, cooking and baking}
+  \resumeSubHeadingSkillEnd
+
+\end{document}
