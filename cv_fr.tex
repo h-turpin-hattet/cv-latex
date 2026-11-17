@@ -17,7 +17,8 @@
 \usepackage{fontawesome5}
 \usepackage{graphicx}
 \usepackage{cfr-lm}
-\usepackage[T1]{fontenc} 
+\usepackage[T1]{fontenc}
+\usepackage{accsupp}
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -27,6 +28,14 @@
 \urlstyle{same}
 \raggedright
 \setlength{\footskip}{4.08003pt}
+
+% Metadata PDF
+\hypersetup{
+  pdftitle={XXXXX},
+  pdfauthor={XXXXX},
+  pdfsubject={XXXXX},
+  pdfkeywords={XXXXX}
+}
 
 % Sections formatting
 \titleformat{\section}{
@@ -70,46 +79,48 @@
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
+% Custom commands render icons invisible to ATS parsers
+\newcommand{\hideicon}[1]{\BeginAccSupp{ActualText={}}#1\EndAccSupp{}}
+
 %---- End of Packages and Functions ------
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%
 %%%%%% DEFINE ELEMENTS HERE %%%%%%%
-\newcommand{\name}{XXXXXXXXX XXXXXX} % My Name
-\newcommand{\titreCV}{XXXXXX}
-\newcommand{\AddressA}{XXXXXXXXXX XXX XXX,} % My address
-\newcommand{\AddressB}{XXXXX XXXXX,} % My Address
-\newcommand{\AddressC}{XXXXXXXXX} % My Address
-\newcommand{\phone}{X XX XX XX XX} % My Phone Number
-\newcommand{\email}{XXXXXXXXXXXX@XXXXX.XXX} %My Email
+\newcommand{\name}{XXXXX} % My Name
+\newcommand{\titreCV}{XXXXX}
+\newcommand{\AddressA}{XXXXX,} % My address
+\newcommand{\AddressB}{XXXXX,} % My Address
+\newcommand{\AddressC}{XXXXX} % My Address
+\newcommand{\phone}{XXXXX} % My Phone Number
+\newcommand{\email}{XXXXX} %My Email
 
 
 
-
+\frenchspacing
 \begin{document}
 \fontfamily{cmr}\selectfont
 
 %----------HEADING-----------------
 \parbox{2.5cm}{
-\includegraphics[width=2.5cm,clip]{XX/XXXXXXX.png}
+\includegraphics[width=2.5cm,clip]{CV/portraitCV.png}
 }
 \parbox{\dimexpr\linewidth-2.9cm\relax}{
 \begin{tabularx}{\linewidth}{L r} \\
   \textbf{\Large \name}\\
-  \textbf{\titreCV}\\
-  \AddressA  & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +33  \phone}\\
-  \AddressB & \href{mailto:\email}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\email}} \\
-  \AddressC &  \href{}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}\\
-  
+  \textbf{\titreCV} & {\hideicon{\raisebox{0.0\height}{\footnotesize \scalebox{0.90} \faPhone}}\ +33  \phone}\\
+  \AddressA  & \href{mailto:\email}{\hideicon{\raisebox{0.0\height}{\footnotesize \scalebox{0.90} \faEnvelope}}\ {\email}} \\
+  \AddressB &  \href{XXXXX}{\hideicon{\raisebox{0.0\height}{\footnotesize \faLinkedin}}\ {XXXXX}}\\
+  \AddressC &  \href{XXXXX}{\hideicon{\raisebox{0.1\height}{\footnotesize \faGithub}}\ {XXXXX}}\\
 \end{tabularx}
 }
 
 %-----------PROFIL-------------
-\vspace{-2mm}
+\vspace{-1mm}
 \section{\textbf{Profil}}
   \resumeSubHeadingTextStart
     \resumeSubheadingText
-       {Ingénieur QA Automation, 6 ans d'expérience combinant architecture technique de tests (Python, ECU-TEST, Jenkins, GitHub) et pilotage d'équipe. Aujourd'hui en spécialisation vers l'automatisation avancée, avec Python (pytest, GitHub Actions) et une formation DevOps prévue dans les prochains mois.}\\
+       {Ingénieur QA Automation, 6 ans d’expérience couvrant l’architecture technique de tests, le développement de tests automatisés, leur exécution et le pilotage d’équipe. Aujourd’hui en spécialisation vers l’automatisation avancée (Python, pytest, GitHub Actions).}\\
        {Recherche un poste basé à Paris.}     
   \resumeSubHeadingTextEnd
   
@@ -120,15 +131,14 @@
 \section{\textbf{Formation}}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Autoformation - Python (pytest, GitHub Actions)}{}
-      {Révision des bases Python (freeCodeCamp, Exercism) et projet portfolio de tests automatisés}{2026 - Présent}
+      {Formation Python et automatisation de tests}{}
+      {Projet portfolio de tests automatisés (pytest, GitHub Actions) et pratique régulière de Python}{2026 - Présent}
     \resumeSubheading
       {ESEO École d’Ingénieurs}{}
-      {Électronique, informatique et systèmes embarqués}{2016 - 2019}
+      {Diplôme d'ingénieur (Bac+5) en électronique, informatique et systèmes embarqués}{2016 - 2019}
     \resumeSubheading
       {IUT Électronique et Informatique Industrielle}{}
-      {Mathématiques, physique, électricité, électronique, informatique, automatisme}{2014 - 2016}
-
+      {DUT (Bac+2), électricité, électronique, informatique, automatisme}{2014 - 2016}
   \resumeSubHeadingListEnd
 \vspace{-5.5mm}
 %
@@ -141,13 +151,12 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Up-Technologies}{Lyon}
-      {Ingénieur Test Système - BioMérieux}{Janvier 2026 - Mars 2026}
+      {Ingénieur Test Système - bioMérieux}{Janvier 2026 - Mars 2026}
       \vspace{-1mm}
       \resumeItemListStart
     \item {Prise en main d'une architecture web complexe pour des tests fonctionnels (solution de diagnostic médical)}
-    \item {Exécution de tests manuels et labo, avec rédaction de protocoles qualité et analyse de requêtes SQL}
     \item {Maintenance d'un outil d'automatisation de tests existant en Python, définition d'axes d'automatisation}
-     
+    \item {Exécution de tests manuels en laboratoire, protocoles qualité, contrôle de cohérence des données} 
     \resumeItemListEnd
 
     \vspace{-1.5mm}
@@ -157,37 +166,35 @@
       {Product Owner Automatisation - BMW Smoketest}{Mai 2024 - Décembre 2025}
       \vspace{-1mm}
       \resumeItemListStart
-    \item {Refonte de l'architecture de test vers un modèle machine à états, en pilotage et développement actif}
-    \item {Conception de l'architecture globale des campagnes de tests automatisés}
-    \item{Réorganisation et optimisation de packages d'automatisation existants (Selenium, Android, QR code) en bibliothèque réutilisable, avec tests complémentaires via ADB/ADB Shell}
-    \item{Supervision des pipelines CI (Jenkins) au sein de l'équipe}
-    \item {Coordination des tests et des plannings d'équipe, présentation des résultats aux parties prenantes}
-    
+    \item {Conception de l'architecture globale des campagnes de tests automatisés, avec refonte vers un modèle machine à états en développement actif}
+    \item {Définition des protocoles de test et du périmètre d'automatisation}
+    \item{Réorganisation de packages d'automatisation (Selenium, Android, QR code) en bibliothèque réutilisable, avec tests complémentaires ADB/ADB Shell}
+    \item{Tests automatisés de l’application BMW sur téléphones Android et iOS}
+    \item {Pilotage technique d'une équipe de 5 à 7 personnes, priorités de test, supervision CI, plannings, reporting}
     \resumeItemListEnd
 
     \vspace{-1.5mm}
     
     \resumeSubheading
       {Capgemini Engineering}{Munich}
-      {Ingénieur en Automatisation - BMW Speech}{Avril 2022 - Mai 2024}
+      {Ingénieur Automatisation - BMW Speech}{Avril 2022 - Mai 2024}
       \vspace{-1mm}
       \resumeItemListStart
     \item {Mise en place de pipelines CI (Jenkins) et développement de tests automatisés en Python (ECU-TEST)}
-    \item {Optimisation du code de test consommant un service de synthèse vocale AWS}
-    \item {Analyse de protocoles de communication bas niveau (USB, Bluetooth, réseaux embarqués) support à la validation fonctionnelle}
-    \item {Réponse à un changement logiciel imprévu côté client par la conception d'une solution matérielle et d'un protocole d'injection réseau, débloquant la poursuite des campagnes de test}
-    
+    \item {Fiabilisation de packages de test, analyse de cohérence, robustesse et régularité des résultats}
+    \item {Étude de protocoles bas niveau (USB, Bluetooth, réseaux embarqués) pour la validation fonctionnelle}
+    \item {Conception d'une solution matérielle et d'un protocole d'injection réseau face à un changement logiciel client imprévu, campagnes de tests débloquées}
     \resumeItemListEnd
 
     \vspace{-1.5mm}
     
     \resumeSubheading
       {Capgemini Engineering}{Munich}
-      {Function Owner - USB BMW Media Player}{Octobre 2019 - Avril 2022}
+      {Function Owner USB - BMW Media Player}{Octobre 2019 - Avril 2022}
       \vspace{-1mm}
       \resumeItemListStart
-    \item {Gestion et triage de défauts logiciels sur plusieurs versions produit, en coordination directe avec le client et les fournisseurs}
-    \item {Conception et exécution de campagnes de test selon les spécifications fonctionnelles}
+    \item {Gestion de défauts logiciels sur plusieurs versions produit, en lien direct avec le client et les fournisseurs}
+    \item {Conception et exécution de campagnes de tests selon les spécifications fonctionnelles}
     \item {Analyse de performance hebdomadaire et définition d'axes d'amélioration qualité}
     \resumeItemListEnd
 
@@ -209,19 +216,17 @@
 %-----------Technical skills-----------------
 \vspace{-0.5mm}
 \section{\textbf{Compétences Techniques et Centres d’Intérêt}}
-  \resumeSubHeadingSkillStart
+\resumeSubHeadingSkillStart
     \resumeSubheadingSkill
-    {Automatisation \& Tests}{ECU-TEST, Jenkins, Git/GitHub, Jira, systèmes embarqués, VMware, SQL, Android,  protocoles de communication (ADB, USB, Bluetooth, SOME/IP, UDS)} 
+    {Automatisation \& Tests}{Python, pytest, GitHub Actions, Jenkins, Git/GitHub, Jira, ECU-TEST, Android (ADB), Selenium, SQL, VMware} 
     \resumeSubheadingSkill
     {Langages de programmation}{Python, Shell/Bash}
     \resumeSubheadingSkill
-    {Méthodologies}{Agile intégré à un cycle en V produit, stratégie de tests, gestion des défauts}
+    {Méthodologies}{Agile intégré à un cycle en V produit, stratégie de tests, gestion des défauts, ISTQB Foundation}
     \resumeSubheadingSkill
-    {Langues}{Français (Avancé), Anglais (Avancé), Allemand (Intermédiaire)}
+    {Langues}{Français (Natif), Anglais (Avancé), Allemand (Intermédiaire)}
     \resumeSubheadingSkill
     {Centres d’Intérêt}{Vélo, natation, course, cinéma, littérature, cuisine et pâtisserie}
   \resumeSubHeadingSkillEnd
 
 \end{document}
- 
-
