@@ -22,5 +22,4 @@ Each update is tracked through Git commits, and notable versions are tagged as r
 |---------|------|---------|
 | v1.3 | 2026-11 | English version aligned with the French one, PDF metadata and text extraction checked |
 | v1.2 | 2026-11 | Profile, education and experience sections reworked, skills updated |
-| v1.1 | 2026-11 | Python, pytest and GitHub Actions added |
 | v1.0 | 2026-10 | Initial version |
